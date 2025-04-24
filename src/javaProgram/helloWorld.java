@@ -217,18 +217,7 @@ public class helloWorld {
 			System.out.println("Password should have at least one digit");
 			if(!hasLowerCase);
 			System.out.println("Password should have lower case strings");
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-				
-		
-		
+		}	
 		
 	}
 }
