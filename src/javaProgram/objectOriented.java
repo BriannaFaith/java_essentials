@@ -17,7 +17,7 @@ public class objectOriented extends bankTypes { // inheritance with bankType cla
 		this.bankType = bankType;
 		System.out.println("Your initial balance is " +balance);
 	}
-	
+
 	//methods
 	public void deposit(double amount) {
 		balance +=amount;
@@ -39,6 +39,13 @@ public class objectOriented extends bankTypes { // inheritance with bankType cla
 		System.out.println("AccountHolder Name :"+accountNumberDetails);
 	}
 	
+	//polymorphism - an object calling a method triggers many forms
+	@Override
+	public void displayBankType(BankType bankType) {
+		System.out.println("This is the new behaviour for :" +bankType);
+	}
+
+	
 	// object
 	public static void main(String args[]){
 		objectOriented myAccount = new objectOriented(100, "001", "John Doe", BankType.LOANS);
@@ -49,9 +56,11 @@ public class objectOriented extends bankTypes { // inheritance with bankType cla
 		
 		objectOriented friendAccount = new objectOriented(100, "002", "Jane Doe", BankType.SAVINGS);
 		friendAccount.displayAccountDetails();
-		friendAccount.displayBankType(BankType.SAVINGS);
+		friendAccount.displayBankType(BankType.SAVINGS); //inherited the method 
 		friendAccount.deposit(200); //300
 		friendAccount.withdraw(400); //insufficient
 	}
+
+	
 	
 }
