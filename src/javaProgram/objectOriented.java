@@ -43,6 +43,7 @@ public class objectOriented extends bankTypes { // inheritance with bankType cla
 	@Override
 	public void displayBankType(BankType bankType) {
 		System.out.println("This is the new behaviour for :" +bankType);
+		System.out.println("This is the new behaviour for :" +bankType);
 	}
 
 	
